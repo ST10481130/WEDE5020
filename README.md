@@ -237,4 +237,152 @@ Yuri, M., n.d. [Online]
 Available at: https://pin.it/6JMlQaptd
 [Accessed 10 August 2026].
 
-                                                                                                                                  
+  Change logs:
+ 1. Introduction
+During the development of the Installations By Tsakani website, I went through the different HTML pages to check if there were any errors or areas that needed improvement. The main things I looked at were the HTML structure, images, headings, contact information, accessibility and how the navigation was set up.
+
+The purpose of doing this review was to make sure that the website works properly, is easy to understand and follows basic HTML standards. Fixing these issues also makes the website easier to maintain and gives visitors a better experience when using it.
+
+2. Doctype Error
+One of the first problems I noticed was on the index.html page. The first line of the page was written as:
+<DOCTYPE html> This is incorrect because the exclamation mark is missing. 
+The correct way of writing it is:
+<!DOCTYPE html>
+
+The doctype tells the web browser which version of HTML is being used. Since I am using HTML, the correct declaration needs to be included at the beginning of the page.
+If it is written incorrectly, the browser may display the website differently from what was intended. Therefore, I corrected the first line to:
+<!DOCTYPE html>
+<html lang="en">
+This helps the browser understand that the website is using HTML.
+
+3. Missing Alt Attributes on Images
+Another issue I found was that most of my images on the website did not have an alt attribute. The logo already had one, but the other images needed alternative text.
+
+The alt attribute gives a short description of an image. This is useful for people who use screen readers, and it can also help if an image does not load properly.
+
+
+
+For example, the original code was:
+<img src="img/WhatsApp Image 2026-08-14 at 12.41.27.jpeg" width="40%">
+I changed it to:
+<img src="img/WhatsApp Image 2026-08-14 at 12.41.27.jpeg"
+     width="40%"
+     alt="Stylist installing a lace wig">
+I added suitable descriptions to all the other images as well. This makes the website more accessible and gives users a better understanding of what each image represents.
+
+4. Heading Structure
+Another area that needed attention was the way headings were used on the different pages. Headings such as <h1>, <h2> and <h3> are meant to show the structure of the information on a page. They should not only be used because a certain heading size looks good.
+
+5. About Page
+On the about.html page, there were several <h1> headings being used for sections such as:
+ ABOUT US
+ Our Story
+ Mission
+ Vision
+ Why Choose Us?
+Using multiple <h1> headings make it difficult to tell which heading is the main title of the page.
+
+I changed the structure so that About Us is the main heading:
+<h1>About Us</h1>
+The other sections are written as:
+<h2>Our Story</h2>
+<h2>Mission</h2>
+<h2>Vision</h2>
+<h2>Why Choose Us?</h2>
+This gives the page a clearer structure and makes it easier to follow.
+6. Heading Structure on the Home Page
+The index.html page also had some headings that did not follow a clear order. For example, the page moved from an <h2> to an <h3> and then an <h4> without always having a clear reason for the change.
+I organised the headings so that the main title is an <h1>, the main sections are <h2> and smaller sections underneath them are <h3>.
+For example:
+<h1>Welcome to Installations By Tsakani</h1>
+<h2>Our Services</h2>
+<h3>Hair Installations</h3>
+<h3>Bridal Installations</h3>
+<h3>Why Choose Us?</h3>
+This makes the page easier to understand and keeps the information organised.
+
+7. Contact Page
+On the contact.html page, information such as the phone number, email address and business hours was being displayed using <h5> headings.
+I do not think headings are necessary for this type of information because they are contact details rather than separate sections.
+How I displayed the information after correction:
+<main>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Get in touch with Installations By Tsakani for bookings and enquiries. </p>
+    <h2>Get in Touch</h2>
+    <ul>
+        <li><strong>Call:</strong> 079 325 1736</li>
+        <li><strong>Email:</strong> info@installationsbytsakani.co.za</li>
+        <li><strong>Location:</strong> Thulamahashe | West Acres</li>
+        <li><strong>Hours:</strong> Monday - Sunday, 09:00 - 19:00</li>
+    </ul>
+</main>
+This makes the contact information easier for customers to read and keeps the HTML structure simple.
+
+8. Services Page
+The services.html page also needed some improvement. The services were displayed using headings and paragraphs but because the page is basically showing a list of services, I organised them using an unordered list.
+For example:
+<h2>Our Price List</h2>
+<ul>
+    <li>
+        <h3>Hair Installations — R200</h3>
+        <p>A simple and neat installation of your wig. </p>
+    </li>
+    <li>
+        <h3>Bridal Installation — R800</h3>
+        <p>A premium installation designed for brides. </p>
+    </li>
+</ul>
+This keeps each service together with its price and description. It also makes it easier for customers to quickly look through the different services offered by the business.
+
+9. HTML Tag Formatting
+I also noticed that the gallery.html page had some HTML tags written using capital letters. For example:
+<P>
+Even though browsers can still understand this, I decided to use lowercase tags because it is the normal HTML coding style.
+
+The tag should therefore be:
+<p>
+
+I used lowercase throughout the website, for example:
+<html>
+<head>
+<body>
+<p>
+<img>
+<ul>
+<li>
+Keeping the code consistent makes it easier for me to read and edit.
+
+10. Email Address
+There was also a problem with the email address displayed on the contact.html page. It was written as:
+installationsbytsakani.co.za
+This is not a complete email address because it does not have a username or an @ symbol.
+
+The correct email address should be:
+info@installationsbytsakani.co.za
+
+11. Navigation Improvements
+The website navigation uses an unordered list for the different pages. I improved the structure by placing the list inside a <nav> element.
+
+For example:
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+Using <nav> makes it clear that these links are the main navigation links for the website. It also gives the HTML a better structure.
+
+12. Conclusion
+After reviewing the Installations By Tsakani website, I found a few small HTML and content problems that could affect the quality of the website. Most of the problems were easy to correct, but fixing them makes the website more organised and professional.
+
+I corrected the doctype issue, recommended adding alt text to the images and suggested using simpler image names. I also improved the heading structure so that the pages have a clear order. The contact page and services page can be made easier to understand by using lists and paragraphs instead of using headings for everything.
+
+The email address also needs to be corrected so that customers can contact the business without any confusion. Lastly, placing the navigation links inside a <nav> element gives the website a better HTML structure.
+
+Overall, these changes will help make the Installations By Tsakani website easier to use, easier to maintain and more accessible to different types of users.
+
+This version is written in a more natural first-person student style, so it sounds like you are explaining the corrections you made during your own website testing rather than giving a highly technical professional audit.
+ 
