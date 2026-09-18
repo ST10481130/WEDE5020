@@ -1,0 +1,463 @@
+/* ---------- GENERAL PAGE SETTINGS ---------- */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    line-height: 1.7;
+}
+
+
+/* ---------- NAVIGATION BAR ---------- */
+
+body > ul {
+    list-style: none;
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 18px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+}
+
+body > ul li {
+    list-style: none;
+}
+
+body > ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+body > ul li a:hover {
+    background-color: #e8a5c5;
+    color: #171717;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+main {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ---------- MAIN HEADINGS ---------- */
+
+main h1 {
+    background-color: #f6c5dc;
+    color: #171717;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 55px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 55px 20px;
+    margin: 0 -5.5%;
+    margin-bottom: 35px;
+}
+
+main h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #171717;
+    font-size: 32px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 35px 0 15px;
+}
+
+main h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #c65b8d;
+    font-size: 25px;
+    margin: 25px 0 10px;
+}
+
+main h4 {
+    display: inline-block;
+    background-color: #171717;
+    color: #f6c5dc;
+    padding: 15px 30px;
+    border-radius: 30px;
+    margin: 35px 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+
+/* ---------- PARAGRAPHS ---------- */
+
+main p {
+    max-width: 850px;
+    margin: 0 auto 25px;
+    color: #555555;
+    font-size: 16px;
+}
+
+
+/* ---------- HOME PAGE IMAGES ---------- */
+
+main > img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 12px;
+    border-radius: 8px;
+}
+
+
+/* Home page first two images */
+
+main > img[alt="LOGO of our Salon"] {
+    width: 260px !important;
+    border-radius: 0;
+    object-fit: contain;
+}
+
+main > img[alt="Aesthetics"] {
+    width: 55% !important;
+    max-height: 430px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ---------- FEATURED SERVICES ---------- */
+
+
+main > ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto 50px;
+}
+
+main > ul li {
+    background-color: #ffffff;
+    border: 1px solid #f0b5d0;
+    border-top: 5px solid #e8a5c5;
+    padding: 25px 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+main > ul li:hover {
+    background-color: #fceaf3;
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.13);
+}
+
+
+/* ---------- ABOUT PAGE ---------- */
+
+main img[alt="Salon Image"] {
+    width: 55% !important;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    margin: 10px auto 30px;
+}
+
+
+/* About headings */
+
+main h2 {
+    position: relative;
+}
+
+main h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #e8a5c5;
+    margin: 10px auto;
+}
+
+
+/* ---------- SERVICES PAGE ---------- */
+
+
+main > ul li h3 {
+    color: #171717;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+main > ul li p {
+    font-size: 14px;
+    color: #666666;
+}
+
+
+/* Price styling */
+
+main > ul li h3::first-letter {
+    color: #c65b8d;
+}
+
+
+/* Service images */
+
+main img[alt="Style Image"],
+main img[alt="Hair Styling"] {
+    width: 40% !important;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+main img[alt="Style Image"]:hover,
+main img[alt="Hair Styling"]:hover {
+    transform: scale(1.03);
+}
+
+
+/* ---------- GALLERY PAGE ---------- */
+ 
+
+main img[alt^="Style"] {
+    width: 30% !important;
+    height: 330px;
+    object-fit: cover;
+    margin: 8px;
+    border-radius: 12px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.35s ease;
+}
+
+main img[alt^="Style"]:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 30px rgba(232, 165, 197, 0.8);
+}
+
+
+/* ---------- CONTACT PAGE ---------- */
+
+
+/* Contact information list */
+
+main > ul li strong {
+    color: #c65b8d;
+}
+
+main > ul li {
+    font-size: 15px;
+}
+
+
+/* Contact images */
+
+main img[alt="Hair Styling"] {
+    max-width: 500px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: #171717;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 70px;
+}
+
+footer p {
+    color: #f6c5dc;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* ---------- SPECIAL PINK SECTION EFFECT ---------- */
+
+main::after {
+    content: "";
+    display: block;
+    height: 50px;
+    background-color: #f6c5dc;
+    margin-top: 50px;
+}
+
+
+/* ---------- TEXT SELECTION ---------- */
+
+::selection {
+    background-color: #e8a5c5;
+    color: #171717;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    body > ul {
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    body > ul li a {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+
+    main h1 {
+        font-size: 42px;
+    }
+
+    main > ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main img[alt^="Style"] {
+        width: 45% !important;
+        height: 280px;
+    }
+
+    main img[alt="Aesthetics"],
+    main img[alt="Salon Image"] {
+        width: 75% !important;
+    }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body > ul {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+    }
+
+    body > ul li a {
+        text-align: center;
+        font-size: 10px;
+        padding: 9px 5px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    main h1 {
+        font-size: 32px;
+        letter-spacing: 1px;
+        padding: 40px 10px;
+        margin-left: -4.5%;
+        margin-right: -4.5%;
+    }
+
+    main h2 {
+        font-size: 25px;
+    }
+
+    main h3 {
+        font-size: 21px;
+    }
+
+    main p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+
+    /* Home images */
+
+    main > img[alt="LOGO of our Salon"] {
+        width: 70% !important;
+    }
+
+    main > img[alt="Aesthetics"],
+    main img[alt="Salon Image"] {
+        width: 100% !important;
+        max-height: 350px;
+    }
+
+
+    /* Service cards */
+
+    main > ul {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    main > ul li {
+        padding: 20px;
+    }
+
+
+    /* Gallery */
+
+    main img[alt^="Style"] {
+        width: 100% !important;
+        height: 350px;
+        margin: 8px 0;
+    }
+
+
+    /* Service images */
+
+    main img[alt="Style Image"],
+    main img[alt="Hair Styling"] {
+        width: 100% !important;
+        height: 350px;
+        margin: 8px 0;
+    }
+
+
+    main h4 {
+        font-size: 12px;
+        padding: 12px 20px;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 25px 10px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
