@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Service Enquiries | Installations By Tsakani</title>
+    <meta name="description"
+          content="Enquire about wig installations, hair styling, bridal installations, wig revamps and lace cleaning at Installations By Tsakani.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+    <title> Enquiries </title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="enquiry.html" aria-current="page">Enquiries</a></li>
+    </ul>
+
+    <main>
+        <h1>Hair Service Enquiry</h1>
+        <p>
+            Tell us which service you are interested in.
+            We will provide an estimated cost to help you plan
+            your next appointment.
+        </p>
+
+        <form id="enquiryForm"
+              action="mailto:info@installationsbytsakani.co.za"
+              method="post" enctype="text/plain">
+
+            <label for="enquiry-name">Full Name:</label>
+            <input type="text" id="enquiry-name" name="name"
+                   minlength="2" maxlength="80" required>
+
+            <label for="enquiry-email">Email Address:</label>
+            <input type="email" id="enquiry-email" name="email"
+                   maxlength="254" required>
+
+            <label for="enquiry-phone">Phone Number:</label>
+            <input type="tel" id="enquiry-phone" name="phone"
+                   pattern="[0-9+() -]{7,20}" required>
+
+            <label for="service">Choose a Service:</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="Hair Installations">Hair Installations - R200</option>
+                <option value="Hair Styling">Hair Styling - R300</option>
+                <option value="Bridal Installation">Bridal Installation - R800</option>
+                <option value="Hair Revamp">Hair Revamp - R100</option>
+                <option value="Lace Cleaning">Lace Cleaning - R50</option>
+            </select>
+
+            <label for="quantity">Number of Services:</label>
+            <input type="number" id="quantity" name="quantity"
+                   min="1" max="10" value="1" required>
+
+            <label for="date">Preferred Appointment Date:</label>
+            <input type="date" id="date" name="date"
+                   min="2026-10-26" required>
+
+            <label for="notes">Additional Requirements:</label>
+            <textarea id="notes" name="notes"
+                      maxlength="1000" rows="4"></textarea>
+
+            <p class="enquiry-result" aria-live="polite"></p>
+
+            <button type="submit">Submit Enquiry</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Installations By Tsakani. All rights reserved.</p>
+    </footer>
+</body>
+</html>
