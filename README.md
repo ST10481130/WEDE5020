@@ -386,3 +386,119 @@ Overall, these changes will help make the Installations By Tsakani website easie
 
 This version is written in a more natural first-person student style, so it sounds like you are explaining the corrections you made during your own website testing rather than giving a highly technical professional audit.
  
+
+ 
+Table of Contents
+Introduction	2
+Interactive Elements	2
+Dynamic Content and Search Functionality	3
+Form Functionality and Validation	3
+Contact Form	3
+Service Enquiry Form	4
+Search Engine Optimisation (SEO)	4
+Security and Performance	5
+Additional Functionality and Future Improvements	5
+Social Media Integration and Interactive Icons	6
+Website Hosting and Search Engine Optimisation (SEO)	6
+Conclusion	7
+
+
+ 
+Introduction
+JavaScript was added to the Installations By Tsakani website to improve interactivity, functionality, and user experience. A separate JavaScript file named script.js was created and linked to the HTML pages using the <script src="script.js" defer></script> element. This allows JavaScript to run after the HTML document has been loaded and enables interactive features to be shared across the website’s pages.
+Interactive Elements
+Several interactive features were implemented to make the website easier and more enjoyable to use.
+
+Image gallery with a lightbox: JavaScript was used to make images clickable. When a visitor clicks an image in the Gallery page, it opens in a larger, full-screen view. Navigation buttons allow visitors to move between images, while the close button and Escape key allow them to exit the lightbox. For example, a visitor can click a hairstyle image to view the details more clearly before choosing a style.
+
+Accordion functionality: Expandable sections were added to the About Us page using JavaScript event listeners. The headings, such as “Our Mission” and “Our Vision,” can be clicked to show or hide their content. This reduces the amount of information displayed at once and makes the page easier to navigate.
+
+Animations and transitions: CSS transitions and JavaScript were used to introduce visual effects. Page elements gradually appear as visitors scroll down the page, and gallery images enlarge slightly when the mouse pointer moves over them. These effects improve the visual presentation of the website.
+
+Navigation highlighting: JavaScript checks the current page and highlights the corresponding navigation link. This helps visitors identify which section of the website they are viewing.
+
+
+
+
+Dynamic Content and Search Functionality
+JavaScript was used to create a search and sorting feature on the Services page. A search field allows visitors to filter services by entering keywords, while a dropdown menu allows them to sort services by price or name.
+
+For example, visitors can search for “Bridal Installation” to find the relevant service. They can also sort the available services from the lowest to the highest price or alphabetically.
+
+The prices used in the service listing include:
+•	Hair Installations: R200
+•	Hair Styling: R300
+•	Bridal Installation: R800
+•	Hair Revamp: R100
+•	Lace Cleaning: R50
+JavaScript dynamically updates the displayed service list according to the search term and selected sorting option without requiring the page to reload.
+
+Form Functionality and Validation
+Two forms were included to serve different purposes: a general contact form and a service enquiry form.
+
+Contact Form
+The Contact Us page includes a form that collects the visitor’s full name, email address, phone number, message type, and message. HTML form attributes and JavaScript validation are used to check the information before the form proceeds.
+
+For example, the email field uses type="email" to check the email format, while the message field requires a minimum of ten characters. The phone number is checked against a pattern that allows digits, spaces, brackets, plus signs, and hyphens.
+
+After successful validation, JavaScript prepares an email addressed to info@installationsbytsakani.co.za containing the visitor’s details and message. The visitor must then send the email through their email application.
+
+Service Enquiry Form
+A separate enquiry.html page was created to allow visitors to enquire about specific hair services. The form collects the visitor’s contact information, selected service, quantity, preferred appointment date, and any additional requirements.
+
+JavaScript calculates an estimated cost based on the selected service and quantity.
+For example, if a visitor selects Hair Styling at R300 and requests two services, the estimated total is calculated as follows:
+R300 × 2 = R600
+The estimated amount is displayed dynamically when the visitor changes the selected service or quantity. Before the enquiry is prepared for email, JavaScript checks that the visitor has provided valid information and selected an available service from the predefined list.
+
+The estimate is not a confirmed booking or guarantee of availability. The salon must confirm the final price and appointment date.
+
+Search Engine Optimisation (SEO)
+Basic on-page SEO improvements were planned and implemented through HTML metadata, headings, image descriptions, and mobile-friendly design.
+
+Examples include:
+•	Title tags: Descriptive titles such as “Wig Installations and Hair Styling | Installations By Tsakani” help identify the content of each page.
+•	Meta descriptions: Descriptions explain the salon’s services and help search engines and potential visitors understand what the website offers.
+•	Heading structure: Heading elements such as <h1>, <h2>, and <h3> organise the content into meaningful sections.
+•	Image optimisation: Descriptive alternative text, such as alt="Hair Styling", helps explain images to users who cannot see them and supports accessibility.
+•	Internal linking: Navigation links connect the Home, About, Services, Gallery, Contact Us, and Enquiries pages.
+•	Mobile responsiveness: CSS media queries help the website adapt to smaller screens, including mobile phones and tablets.
+•	Robots.txt and sitemap.xml: These files were prepared to guide search engine crawlers and identify the website’s pages for indexing. They must contain the correct live website domain before publication.
+•	Off-page SEO activities, including building reputable backlinks and promoting the salon on social media, remain ongoing tasks.
+
+Security and Performance
+Basic performance and accessibility considerations were incorporated into the website. CSS transitions were adjusted for visitors who prefer reduced motion, and semantic HTML elements and accessible labels were used to improve usability.
+
+Client-side form validation helps prevent incomplete or incorrectly formatted information from proceeding. However, this validation does not replace server-side validation or security controls. A production website would require secure form processing, protection against malicious submissions, and appropriate handling of visitors’ personal information.
+Images should also be compressed and resized appropriately to improve loading speed.
+
+Additional Functionality and Future Improvements
+Although several interactive features have been implemented, some requirements need additional development.
+
+AJAX form submission requires a backend endpoint or a suitable form-processing service. The current forms prepare emails using the visitor’s email application and do not automatically submit data to a server.
+
+I implemented an interactive map on the Installations By Tsakani salon website using Leaflet.js and OpenStreetMap. The map displays the salon’s location in Thulamahashe, allowing customers to zoom in and out, explore the surrounding area, and view the salon’s location through a clickable marker. I also added a customised, pink-themed “Find Our Salon” button that directs customers to Google Maps for navigation. This feature improves the website’s usability and helps customers locate the salon more easily.
+
+
+
+
+
+
+Social Media Integration and Interactive Icons
+I added a social media integration section to the Installations By Tsakani website to make it easier for visitors and potential customers to connect with the salon through different online platforms. The section includes three visually appealing social media buttons for WhatsApp, Instagram and TikTok. Each button features a large circular icon positioned on the left side of a pink, rounded rectangular design. I used HTML to create the social media links and CSS to style the buttons, including the pink gradient backgrounds, circular borders, shadows, spacing and hover animations.
+
+I also integrated Font Awesome to display the official social media icons, making the buttons more recognisable and visually attractive. Each icon is connected to the salon’s actual social media account using clickable hyperlinks. For example, clicking the WhatsApp icon directs customers to a WhatsApp chat using the salon’s business number, while the Instagram and TikTok icons direct visitors to the salon’s respective profiles. I included target="_blank" so that the social media pages open in a new browser tab, allowing visitors to return to the salon website easily.
+
+Additionally, I implemented responsive CSS styling to ensure that the social media buttons adjust to different screen sizes, including mobile phones and desktop devices. This improves accessibility, user experience and customer engagement by providing visitors with convenient ways to communicate with the salon, view its work and follow its social media updates.
+
+Website Hosting and Search Engine Optimisation (SEO)
+The Installations By Tsakani website was successfully hosted using InfinityFree, a free web hosting platform that allows websites to be published and accessed online. Hosting the website made it possible for visitors and potential customers to access the salon’s services and business information through the internet.
+
+To improve the website’s visibility and search engine performance, I implemented several SEO techniques. These included creating an XML sitemap to help search engines discover and understand the website’s pages, as well as adding a robots.txt file to provide instructions to search engine crawlers regarding which parts of the website they are allowed to access and index.
+
+I also implemented an SEO optimiser to improve the website’s search engine optimisation. This involved adding relevant page titles, meta descriptions, appropriate keywords and SEO-friendly content. These techniques help search engines understand the purpose of the website and improve its chances of appearing in relevant search results.
+Conclusion
+The JavaScript enhancements improved the functionality and interactivity of the Installations By Tsakani website. Specific examples include the gallery lightbox, expandable accordion sections, animated page elements, dynamic service search and sorting, form validation, and automatic price estimation for selected services.
+
+Linking script.js to the HTML pages allowed these features to be organised in one reusable file. Together with the HTML and CSS improvements, the enhancements provide visitors with a more convenient way to explore hairstyles, compare service prices, estimate costs, and contact the salon. Additional server-side processing, AJAX functionality, interactive maps, and ongoing SEO activities can further improve the website and address the remaining requirements.
+
