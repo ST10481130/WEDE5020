@@ -795,3 +795,162 @@ button:hover {
     }
 }
 
+/* =================================
+   SOCIAL MEDIA BUTTONS
+================================= */
+
+.social-section {
+    width: 100%;
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 20px 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+}
+
+/* MAIN BUTTON */
+
+.social-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 115px;
+
+    background: linear-gradient(
+        135deg,
+        #fbe0e9,
+        #f4c6d7,
+        #f9dce7
+    );
+
+    border: 4px double #d879a4;
+    border-radius: 70px;
+
+    text-decoration: none;
+    color: #171717;
+
+    box-shadow: 0 5px 12px rgba(200, 100, 145, 0.15);
+
+    transition: all 0.3s ease;
+}
+
+/* CIRCULAR ICON */
+
+.social-icon {
+    position: absolute;
+    left: -10px;
+
+    width: 145px;
+    height: 145px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+
+    border: 7px double #d879a4;
+    border-radius: 50%;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+
+    z-index: 2;
+}
+
+.social-icon i {
+    font-size: 75px;
+    color: white;
+}
+
+/* WHATSAPP ICON */
+
+.whatsapp .social-icon {
+    background: #25D366;
+}
+
+.whatsapp .social-icon i {
+    color: white;
+}
+
+/* INSTAGRAM ICON */
+
+.instagram .social-icon {
+    background: linear-gradient(
+        45deg,
+        #ffdc80,
+        #fcaf45,
+        #f56040,
+        #e1306c,
+        #833ab4,
+        #405de6
+    );
+}
+
+.instagram .social-icon i {
+    color: white;
+}
+
+/* TIKTOK ICON */
+
+.tiktok .social-icon {
+    background: #000000;
+}
+
+.tiktok .social-icon i {
+    color: white;
+    filter: drop-shadow(3px 2px #fe2c55)
+            drop-shadow(-3px -2px #25f4ee);
+}
+
+/* BUTTON TEXT */
+
+.social-text {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+/* HOVER EFFECT */
+
+.social-button:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 20px rgba(200, 100, 145, 0.3);
+    border-color: #c34e87;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .social-section {
+        gap: 55px;
+        padding: 15px 20px;
+    }
+
+    .social-button {
+        min-height: 90px;
+    }
+
+    .social-icon {
+        width: 110px;
+        height: 110px;
+        left: -12px;
+        border-width: 5px;
+    }
+
+    .social-icon i {
+        font-size: 55px;
+    }
+
+    .social-text {
+        font-size: 16px;
+        margin-left: 85px;
+    }
+}
