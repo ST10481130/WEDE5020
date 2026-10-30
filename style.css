@@ -1,4 +1,4 @@
-/* ---------- GENERAL PAGE SETTINGS ---------- */
+/** GENERAL PAGE SETTINGS **/
 
 *{
     box-sizing: border-box;
@@ -18,7 +18,7 @@ body {
 }
 
 
-/* ---------- NAVIGATION BAR ---------- */
+/** NAVIGATION BAR **/
 
 body > ul {
     list-style: none;
@@ -58,7 +58,7 @@ body > ul li a:hover {
 }
 
 
-/* ---------- MAIN CONTENT ---------- */
+/*  MAIN CONTENT */
 
 main {
     width: 90%;
@@ -68,7 +68,7 @@ main {
 }
 
 
-/* ---------- MAIN HEADINGS ---------- */
+/*  MAIN HEADINGS  */
 
 main h1 {
     background-color: #f6c5dc;
@@ -112,7 +112,7 @@ main h4 {
 }
 
 
-/* ---------- PARAGRAPHS ---------- */
+/*  PARAGRAPHS  */
 
 main p {
     max-width: 850px;
@@ -122,7 +122,7 @@ main p {
 }
 
 
-/* ---------- HOME PAGE IMAGES ---------- */
+/*  HOME PAGE IMAGES  */
 
 main > img {
     max-width: 100%;
@@ -149,7 +149,7 @@ main > img[alt="Aesthetics"] {
 }
 
 
-/* ---------- FEATURED SERVICES ---------- */
+/*  FEATURED SERVICES  */
 
 
 main > ul {
@@ -178,7 +178,7 @@ main > ul li:hover {
 }
 
 
-/* ---------- ABOUT PAGE ---------- */
+/*  ABOUT PAGE  */
 
 main img[alt="Salon Image"] {
     width: 55% !important;
@@ -205,7 +205,7 @@ main h2::after {
 }
 
 
-/* ---------- SERVICES PAGE ---------- */
+/*  SERVICES PAGE  */
 
 
 main > ul li h3 {
@@ -227,7 +227,7 @@ main > ul li h3::first-letter {
 }
 
 
-/* Service images */
+/** Service images **/
 
 main img[alt="Style Image"],
 main img[alt="Hair Styling"] {
@@ -245,7 +245,7 @@ main img[alt="Hair Styling"]:hover {
 }
 
 
-/* ---------- GALLERY PAGE ---------- */
+/** GALLERY PAGE **/
  
 
 main img[alt^="Style"] {
@@ -265,7 +265,7 @@ main img[alt^="Style"]:hover {
 }
 
 
-/* ---------- CONTACT PAGE ---------- */
+/* CONTACT PAGE  */
 
 
 /* Contact information list */
@@ -286,7 +286,7 @@ main img[alt="Hair Styling"] {
 }
 
 
-/* ---------- FOOTER ---------- */
+/*  FOOTER  */
 
 footer {
     background-color: #171717;
@@ -303,7 +303,7 @@ footer p {
 }
 
 
-/* ---------- SPECIAL PINK SECTION EFFECT ---------- */
+/*  SPECIAL PINK SECTION EFFECT  */
 
 main::after {
     content: "";
@@ -314,7 +314,7 @@ main::after {
 }
 
 
-/* ---------- TEXT SELECTION ---------- */
+/*  TEXT SELECTION  */
 
 ::selection {
     background-color: #e8a5c5;
@@ -322,9 +322,7 @@ main::after {
 }
 
 
-/* =========================================
-   TABLET RESPONSIVE DESIGN
-   ========================================= */
+/* TABLET RESPONSIVE DESIGN */
 
 @media (max-width: 900px) {
 
@@ -358,9 +356,7 @@ main::after {
 }
 
 
-/* =========================================
-   MOBILE RESPONSIVE DESIGN
-   ========================================= */
+/* MOBILE RESPONSIVE DESIGN */
 
 @media (max-width: 600px) {
 
@@ -459,5 +455,502 @@ main::after {
 
     footer p {
         font-size: 12px;
+    }
+}
+
+/* Interactive service controls and forms */
+.service-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+input, select, textarea, button {
+    font: inherit;
+    max-width: 100%;
+}
+
+form label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+}
+
+form button {
+    margin-top: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gallery image interaction */
+.gallery-clickable {
+    cursor: zoom-in;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-clickable:hover {
+    transform: scale(1.03);
+}
+
+/* Full-screen lightbox */
+.lightbox[hidden] {
+    display: none !important;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.92);
+    color: white;
+}
+
+.lightbox figure {
+    margin: 0;
+    max-width: 80%;
+    text-align: center;
+}
+
+.lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    margin: auto;
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    margin-top: 10px;
+}
+
+.lightbox button {
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+.lightbox-open {
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .lightbox {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .lightbox figure {
+        max-width: 75%;
+    }
+
+    .lightbox button {
+        font-size: 20px;
+    }
+
+    .service-controls {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .gallery-clickable {
+        transition: none;
+    }
+
+    html {
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* CUTE SALON DIRECTIONS BUTTON */
+
+.directions-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 14px 22px;
+    background: linear-gradient(135deg, #fff0f5, #f8d7e5);
+    color: #754357;
+    text-decoration: none;
+    border: 1px solid #edbfd1;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(190, 110, 145, 0.15);
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.directions-btn strong {
+    display: block;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.directions-btn small {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #93677b;
+}
+
+.location-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border-radius: 50%;
+    color: #d46b99;
+    font-size: 26px;
+}
+
+.arrow-icon {
+    font-size: 22px;
+    color: #b85e85;
+    transition: transform 0.3s ease;
+}
+
+/* HOVER EFFECT */
+
+.directions-btn:hover {
+    background: linear-gradient(135deg, #f7d2e2, #edb6cf);
+    box-shadow: 0 8px 20px rgba(190, 110, 145, 0.25);
+    transform: translateY(-3px);
+}
+
+.directions-btn:hover .arrow-icon {
+    transform: translate(3px, -3px);
+}
+
+/* MOBILE FRIENDLY */
+
+@media (max-width: 480px) {
+    .directions-btn {
+        gap: 10px;
+        padding: 12px 17px;
+    }
+}
+
+#salon-map {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    margin: 25px auto;
+    border: 2px solid #f0b5d0;
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.service-controls {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 600px;
+    margin: 25px auto;
+    text-align: left;
+}
+
+.service-controls input,
+.service-controls select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8c3cc;
+    border-radius: 8px;
+}
+
+.service-result-count,
+.enquiry-result {
+    font-weight: bold;
+    color: #b83270;
+    margin: 15px auto;
+}
+
+.gallery-clickable {
+    cursor: pointer;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.lightbox-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+.lightbox-image {
+    display: block;
+    width: auto;
+    max-width: 75%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.lightbox-close,
+.lightbox-previous,
+.lightbox-next {
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 8px;
+    background: #f4b6d0;
+    color: #171717;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -45px;
+    right: 0;
+}
+
+.lightbox-caption {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #salon-map {
+        height: 320px;
+    }
+
+    .lightbox-image {
+        max-width: 80%;
+        max-height: 65vh;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* =================================
+   SOCIAL MEDIA BUTTONS
+================================= */
+
+.social-section {
+    width: 100%;
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 20px 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+}
+
+/* MAIN BUTTON */
+
+.social-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 115px;
+
+    background: linear-gradient(
+        135deg,
+        #fbe0e9,
+        #f4c6d7,
+        #f9dce7
+    );
+
+    border: 4px double #d879a4;
+    border-radius: 70px;
+
+    text-decoration: none;
+    color: #171717;
+
+    box-shadow: 0 5px 12px rgba(200, 100, 145, 0.15);
+
+    transition: all 0.3s ease;
+}
+
+/* CIRCULAR ICON */
+
+.social-icon {
+    position: absolute;
+    left: -10px;
+
+    width: 145px;
+    height: 145px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+
+    border: 7px double #d879a4;
+    border-radius: 50%;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+
+    z-index: 2;
+}
+
+.social-icon i {
+    font-size: 75px;
+    color: white;
+}
+
+/* WHATSAPP ICON */
+
+.whatsapp .social-icon {
+    background: #25D366;
+}
+
+.whatsapp .social-icon i {
+    color: white;
+}
+
+/* INSTAGRAM ICON */
+
+.instagram .social-icon {
+    background: linear-gradient(
+        45deg,
+        #ffdc80,
+        #fcaf45,
+        #f56040,
+        #e1306c,
+        #833ab4,
+        #405de6
+    );
+}
+
+.instagram .social-icon i {
+    color: white;
+}
+
+/* TIKTOK ICON */
+
+.tiktok .social-icon {
+    background: #000000;
+}
+
+.tiktok .social-icon i {
+    color: white;
+    filter: drop-shadow(3px 2px #fe2c55)
+            drop-shadow(-3px -2px #25f4ee);
+}
+
+/* BUTTON TEXT */
+
+.social-text {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+/* HOVER EFFECT */
+
+.social-button:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 20px rgba(200, 100, 145, 0.3);
+    border-color: #c34e87;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .social-section {
+        gap: 55px;
+        padding: 15px 20px;
+    }
+
+    .social-button {
+        min-height: 90px;
+    }
+
+    .social-icon {
+        width: 110px;
+        height: 110px;
+        left: -12px;
+        border-width: 5px;
+    }
+
+    .social-icon i {
+        font-size: 55px;
+    }
+
+    .social-text {
+        font-size: 16px;
+        margin-left: 85px;
     }
 }
